@@ -16,17 +16,16 @@ import {
   PopoverContent,
 } from "@chakra-ui/react";
 import { AddIcon, CloseIcon, CheckIcon } from "@chakra-ui/icons";
+import Head from "next/head";
 
-import { Form, Pagination } from "@/components";
-import { useForm, useAppSelector, useMutations } from "@/hooks";
+import { Form, Pagination } from "@/features/todo/components";
+import { useForm, useAppSelector, useMutations } from "@/features/todo/hooks";
 import {
   getRunningQueriesThunk,
   getTodos,
   useGetTodosQuery,
 } from "@/store/api";
 import { wrapper } from "@/store";
-import { useRouter } from "next/router";
-import Head from "next/head";
 
 const PAGE_SIZE = 5;
 const TOTAL_COUNT = 200;

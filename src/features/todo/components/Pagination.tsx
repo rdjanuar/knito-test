@@ -2,11 +2,16 @@ import React from "react";
 import { Button, Flex, HStack, Text } from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 
-import { usePagination, DOTS, useAppDispatch, useAppSelector } from "@/hooks";
+import {
+  usePagination,
+  DOTS,
+  useAppDispatch,
+  useAppSelector,
+} from "@/features/todo/hooks";
 import type { IUsePagination } from "@/utils";
 import { setPage } from "@/store/slice/paginationSlice";
 
-export const Pagination: React.FC<IUsePagination> = ({
+const Pagination: React.FC<IUsePagination> = ({
   totalCount,
   siblingCount = 1,
   pageSize,
@@ -81,3 +86,5 @@ export const Pagination: React.FC<IUsePagination> = ({
     </Flex>
   );
 };
+
+export default Pagination;

@@ -13,7 +13,7 @@ interface IForm {
   onChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-export const Form: React.FC<IForm> = ({ isShow, value, onChange }) => {
+const Form: React.FC<IForm> = ({ isShow, value, onChange }) => {
   const ref = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
@@ -45,3 +45,5 @@ export const Form: React.FC<IForm> = ({ isShow, value, onChange }) => {
     </Card>
   );
 };
+
+export default Form;
