@@ -35,7 +35,7 @@ export const useMutations = () => {
           id: Math.random() * 1000,
           completed: false,
         });
-      }) as any
+      })
     );
   };
 
@@ -54,7 +54,7 @@ export const useMutations = () => {
         return old.map((el) =>
           el.id === datum.id ? { ...el, completed: !el.completed } : el
         );
-      }) as any
+      })
     );
   };
 
@@ -64,7 +64,7 @@ export const useMutations = () => {
     dispatch(
       todosApi.util.updateQueryData("getTodos", currentPage, (old) => {
         return old.filter((el) => el.id !== id);
-      }) as any
+      })
     );
   };
 
