@@ -16,7 +16,6 @@ import {
   PopoverContent,
 } from "@chakra-ui/react";
 import { AddIcon, CloseIcon, CheckIcon } from "@chakra-ui/icons";
-import Head from "next/head";
 
 import { Form, Pagination } from "@/features/todo/components";
 import { useForm, useAppSelector, useMutations } from "@/features/todo/hooks";
@@ -42,9 +41,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Daily Todo</title>
-      </Head>
       <Container maxW="container.sm" mt={14} mb={6}>
         <VStack spacing={4}>
           <Text
